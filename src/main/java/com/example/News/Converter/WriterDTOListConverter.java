@@ -14,7 +14,7 @@ import java.util.List;
 @Getter
 @Component
 @Setter
-public class WriterDTOListConverter implements Converter<List<Writer>, List<Writer>> {
+public class WriterDTOListConverter implements Converter<List<Writer>, List<WriterDTO>> {
 
     private final ModelMapper modelMapper;
 
@@ -23,7 +23,7 @@ public class WriterDTOListConverter implements Converter<List<Writer>, List<Writ
     }
 
     @Override
-    public List<Writer> convert(final List<Writer> source) {
+    public List<WriterDTO> convert(final List<Writer> source) {
         return modelMapper.map(source, new TypeToken<List<WriterDTO>>() {
         }.getType());
     }

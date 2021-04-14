@@ -10,4 +10,5 @@ public class WriterDTO {
     private Integer id;
     private String name;
     private String lastname;
+    private String email;
 }
